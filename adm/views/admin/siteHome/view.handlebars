@@ -1,0 +1,222 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">PÁGINA HOME</span>
+            <div class="top-list-right">
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+         <div class="top-list">
+            <span class="title-content">TOPO DA PÁGINA</span>
+            <div class="top-list-right">
+                <a href="/home-site/edit-top" class="btn-warning">Editar</a>
+                <a href="/home-site/edit-top-image" class="btn-warning">Editar Imagem</a>
+            </div>
+        </div>
+
+        <div class="content-adm">
+
+            
+            <div class="view-det-adm">
+                <span class="view-adm-title">IMAGEM: </span>
+                <span class="view-adm-info">
+                    {{#if homeTop.dataValues.imageTop}}
+                        <img src="/images/home_top/{{homeTop.dataValues.imageTop}}" class="view-image-home-top">
+                    {{else}}
+                        <img src="/images/home_top/icon_home_top.jpg" class="view-image-home-top">
+                    {{/if}}
+
+                    </span>
+            </div>
+            
+            
+            <div class="view-det-adm">
+                <span class="view-adm-title">Título Um: </span>
+                <span class="view-adm-info">{{homeTop.dataValues.titleOneTop}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Título Dois: </span>
+                <span class="view-adm-info">{{homeTop.dataValues.titleTwoTop}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Título Três: </span>
+                <span class="view-adm-info">{{homeTop.dataValues.titleThreeTop}}</span>
+            </div>
+
+        <div class="view-det-adm">
+                <span class="view-adm-title">Link do Botão: </span>
+                <span class="view-adm-info">{{homeTop.dataValues.linkBtnTop}}</span>
+            </div>
+
+        <div class="view-det-adm">
+                <span class="view-adm-title">Texto do Botão: </span>
+                <span class="view-adm-info">{{homeTop.dataValues.txtBtnTop}}</span>
+            </div>
+
+       
+            <div class="view-det-adm">
+                <span class="view-adm-title">Cadastrado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime homeTop.dataValues.createdAt}}{{/formatDateTime}}
+                </span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Editado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime homeTop.dataValues.updatedAt}}{{/formatDateTime}}
+                </span>
+            </div>
+        </div>
+             <div class="top-list">
+            <span class="title-content">SERVIÇOS</span>
+            <div class="top-list-right">
+                <a href="/home-site/edit-serv" class="btn-warning">Editar</a>
+            </div>
+        </div>
+
+        <div class="content-adm">
+
+          <div class="view-det-adm">
+                <span class="view-adm-title">Título: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servTitle}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Ícone Um: </span>
+                <span class="view-adm-info"><i class="{{homeServices.dataValues.servIconOne}}"></i> - {{homeServices.dataValues.servIconOne}}</span>
+            </div>
+        
+            <div class="view-det-adm">
+                <span class="view-adm-title">Serviço Um: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servTitleOne}}</span>
+            </div>
+        
+                <div class="view-det-adm">
+                <span class="view-adm-title">Descrição Um: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servDescOne}}</span>
+            </div>
+        
+                <div class="view-det-adm">
+                <span class="view-adm-title">Ícone Dois: </span>
+                <span class="view-adm-info"><i class="{{homeServices.dataValues.servIconTwo}}"></i> - {{homeServices.dataValues.servIconTwo}}</span>
+            </div>
+
+        
+             <div class="view-det-adm">
+                <span class="view-adm-title">Serviço Dois: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servTitleTwo}}</span>
+            </div>
+        
+             <div class="view-det-adm">
+                <span class="view-adm-title">Descrição Dois: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servDescTwo}}</span>
+            </div>
+
+                <div class="view-det-adm">
+                <span class="view-adm-title">Ícone Três: </span>
+                <span class="view-adm-info"><i class="{{homeServices.dataValues.servIconThree}}"></i> - {{homeServices.dataValues.servIconThree}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Serviço Três: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servTitleThree}}</span>
+            </div>
+
+        
+              <div class="view-det-adm">
+                <span class="view-adm-title">Descrição Três: </span>
+                <span class="view-adm-info">{{homeServices.dataValues.servDescThree}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Cadastrado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime homeServices.dataValues.createdAt}}{{/formatDateTime}}
+                </span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Editado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime homeServices.dataValues.updatedAt}}{{/formatDateTime}}
+                </span>
+            </div>
+        </div>
+
+
+        <div class="content-adm">
+            </div>
+            
+             <div class="top-list">
+            <span class="title-content">SERVIÇO PREMIUM</span>
+            <div class="top-list-right">
+                <a href="/home-site/edit-prem" class="btn-warning">Editar</a>
+                <a href="/home-site/edit-prem-image" class="btn-warning">Editar Imagem</a>
+            </div>
+        </div>
+
+        <div class="content-adm">
+            <div class="content-adm">
+            <div class="view-det-adm">
+                <span class="view-adm-title">Imagem: </span>
+                <span class="view-adm-info">
+                    {{#if homePremium.dataValues.premImage}}
+                    <img src="/images/home_prem/{{homePremium.dataValues.premImage}}" class="view-image-home-top">
+                    {{else}}
+                    <img src="/images/home_prem/icon_premium_serv.jpg" class="view-image-home-top">
+                    {{/if}}
+
+                </span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Título: </span>
+                <span class="view-adm-info">{{homePremium.dataValues.premTitle}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Subtítulo: </span>
+                <span class="view-adm-info">{{homePremium.dataValues.premSubtitle}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Descrição: </span>
+                <span class="view-adm-info">{{{homePremium.dataValues.premDesc}}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Texto do Botão: </span>
+                <span class="view-adm-info">{{homePremium.dataValues.premBtn_text}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Link do Botão: </span>
+                <span class="view-adm-info">{{homePremium.dataValues.premBtn_link}}</span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Cadastrado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime HomesPremiums.dataValues.createdAt}}{{/formatDateTime}}
+                </span>
+            </div>
+
+            <div class="view-det-adm">
+                <span class="view-adm-title">Editado: </span>
+                <span class="view-adm-info">
+                    {{#formatDateTime HomesPremiums.dataValues.updatedAt}}{{/formatDateTime}}
+                </span>
+            </div>
+
+
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

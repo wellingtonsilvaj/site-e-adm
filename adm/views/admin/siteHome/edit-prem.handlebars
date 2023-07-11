@@ -1,0 +1,59 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">EDITAR</span>
+            <div class="top-list-right">
+                
+                <a href="/home-site" class="btn-primary">Visualizar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/home-site/edit-prem" method="post">
+                        <input type="hidden" name="id" id="id" value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título:<span class="text-danger">*</span></label>
+                                <input type="text" name="premTitle" id="premTitle" class="input-adm" placeholder="Digite o titulo " value="{{data.premTitle}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Subtítulo:<span class="text-danger">*</span></label>
+                                <input type="text" name="premSubtitle" id="premSubtitle" class="input-adm" placeholder="Título dois do topo do site" value="{{data.premSubtitle}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição:<span class="text-danger">*</span></label>
+                                <input type="text" name="premDesc" id="premDesc" class="input-adm" placeholder="Digite a descrição" value="{{data.premDesc}}">
+                            </div>
+                        </div>
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Texto do Botão:<span class="text-danger">*</span></label>
+                                <input type="text" name="premBtn_text" id="premBtn_text" class="input-adm" placeholder="Digite o texto do botão" value="{{data.premBtn_text}}">
+                            </div>
+                        </div>
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Link do Botão:<span class="text-danger">*</span></label>
+                                <input type="text" name="premBtn_link" id="premBtn_link" class="input-adm" placeholder="Digite o link do botão" value="{{data.premBtn_link}}">
+                            </div>
+                        </div>
+
+
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-warning" value="Editar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

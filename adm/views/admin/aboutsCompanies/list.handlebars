@@ -1,0 +1,47 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">LISTAR</span>
+            <div class="top-list-right">
+                <a href="/abouts-companies-site/add" class="btn-success">Cadastrar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <table class="table-list">
+            <thead class="list-head">
+                <tr>
+                    <th class="list-head-content">ID</th>
+                    <th class="list-head-content">Título</th>
+                    <th class="list-head-content table-sm-none">Situação</th>
+                    <th class="list-head-content">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="list-body">
+                
+                {{#each aboutsCompanies}}
+                <tr>
+                    <td class="list-body-content">{{id}}</td>
+                    <td class="list-body-content">{{title}}</td>
+                    <td class="list-body-content table-sm-none">{{SituationsAbout.nameSituation}}</td>
+                    <td class="list-body-content">
+                        <div class="dropdown-action">
+                            <button onclick="actionDropdown({{id}})" class="dropdown-btn-action">Ações</button>
+                            <div id="actionDropdown{{id}}" class="dropdown-action-item">
+                                <a href="/abouts-companies-site/view/{{id}}">Visualizar</a>
+                                <a href="/abouts-companies-site/edit/{{id}}">Editar</a>
+                                <a href="/abouts-companies-site/delete/{{id}}" onclick="return confirm('Tem certeza que deseja excluir este registro?')">Apagar</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <!-- Incluir a paginação -->
+        {{> _pagination}}
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

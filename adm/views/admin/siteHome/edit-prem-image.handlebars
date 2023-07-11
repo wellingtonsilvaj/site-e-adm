@@ -1,0 +1,47 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">EDITAR IMAGEM</span>
+            <div class="top-list-right">
+                <a href="/home-site" class="btn-primary">Visualizar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/home-site/edit-prem-image" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="id" value="{{data.id}}">
+                    <input type="hidden" name="imageOld" id="imageOld" value="{{data.imageOld}}">
+                        
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Imagem (500x500):<span class="text-danger">*</span></label>
+                                <input type="file" name="premImage" id="image" class="input-adm" onchange="inputFilePriviewImgPrem()">
+                            </div>
+                            <div class="column">
+                                {{#if data.imageOld}}
+                                <span id="preview-img">
+                                    <img src="/images/home_prem/{{data.imageOld}}" alt="Imagem" class="view-image-home-top">
+                                    </span>
+                                    {{else}}
+                                    <span id="preview-img">
+                                    <img src="/images/home_prem/icon_premium_serv.jpg" alt="Imagem" class="view-image-home-top">
+                                    </span>
+                                    {{/if}}
+                                
+                            </div>
+                        </div>
+
+                       
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-warning" value="Editar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

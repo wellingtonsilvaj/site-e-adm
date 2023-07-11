@@ -1,0 +1,47 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">EDITAR</span>
+            <div class="top-list-right">
+                
+                <a href="/footer-site" class="btn-primary">Visualizar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/footer-site/edit" method="post">
+                        <input type="hidden" name="id" id="id" value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição:<span class="text-danger">*</span></label>
+                                <input type="text" name="footerDesc" id="footerDesc" class="input-adm" placeholder="Digite a descrição do rodapé " value="{{data.footerDesc}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Texto do Link:<span class="text-danger">*</span></label>
+                                <input type="text" name="footerTextLink" id="footerTextLink" class="input-adm" placeholder="Digite o texto link do rodapé" value="{{data.footerTextLink}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Link:<span class="text-danger">*</span></label>
+                                <input type="text" name="footerLink" id="footerLink" class="input-adm" placeholder="Digite o link do rodapé" value="{{data.footerLink}}">
+                            </div>
+                        </div>
+
+
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-warning" value="Editar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

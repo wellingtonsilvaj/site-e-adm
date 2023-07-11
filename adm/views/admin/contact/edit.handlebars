@@ -1,0 +1,105 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">EDITAR</span>
+            <div class="top-list-right">
+                
+                <a href="/contact-site" class="btn-primary">Visualizar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/contact-site/edit" method="post">
+                        <input type="hidden" name="id" id="id" value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleContact" id="titleContact" class="input-adm" placeholder="Título do contato" value="{{data.titleContact}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição:<span class="text-danger">*</span></label>
+                                <input type="text" name="descContact" id="descContact" class="input-adm" placeholder="Digite a descrição" value="{{data.descContact}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Sobre Empresa:<span class="text-danger">*</span></label>
+                                <input type="text" name="iconCompany" id="iconCompany" class="input-adm" placeholder="Digite o Ícone sobre empresa" value="{{data.iconCompany}}">
+                            </div>
+                        </div>
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Sobre Empresa:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleCompany" id="titleCompany" class="input-adm" placeholder="Digite o título sobre empresa" value="{{data.titleCompany}}">
+                            </div>
+                        </div>
+                 
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Sobre Empresa:<span class="text-danger">*</span></label>
+                                <input type="text" name="descCompany" id="descCompany" class="input-adm" placeholder="Digite a descrição sobre empresa" value="{{data.descCompany}}">
+                            </div>
+                        </div>
+
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone do Endereço:<span class="text-danger">*</span></label>
+                                <input type="text" name="iconAddress" id="iconAddress" class="input-adm" placeholder="Digite o ícone do endereço" value="{{data.iconAddress}}">
+                            </div>
+
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título do Endereço:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleAddress" id="titleAddress" class="input-adm" placeholder="Digite o título do endereço" value="{{data.titleAddress}}">
+                            </div>
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição do Endereço:<span class="text-danger">*</span></label>
+                                <input type="text" name="descAddress" id="descAddress" class="input-adm" placeholder="Digite a descrição do endereço" value="{{data.descAddress}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone do E-mail:<span class="text-danger">*</span></label>
+                                <input type="text" name="iconEmail" id="iconEmail" class="input-adm" placeholder="Digite a descrição do ícone do e-mail" value="{{data.iconEmail}}">
+                            </div>
+                        </div>
+
+                        
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título do E-mail:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleEmail" id="titleEmail" class="input-adm" placeholder="Digite o título do e-mail" value="{{data.titleEmail}}">
+                            </div>
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição do E-mail:<span class="text-danger">*</span></label>
+                                <input type="text" name="descEmail" id="descEmail" class="input-adm" placeholder="Digite a descrição do e-mail" value="{{data.descEmail}}">
+                            </div>
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título da mensagem:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleForm" id="titleForm" class="input-adm" placeholder="Digite o título da mensagem" value="{{data.titleForm}}">
+                            </div>
+                        </div>
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-warning" value="Editar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->

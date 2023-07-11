@@ -1,0 +1,90 @@
+<!-- Inicio do conteudo do administrativo -->
+<div class="wrapper">
+    <div class="row">
+        <div class="top-list">
+            <span class="title-content">EDITAR</span>
+            <div class="top-list-right">
+                
+                <a href="/home-site" class="btn-primary">Visualizar</a>
+            </div>
+        </div>
+
+        {{>_msgAdm}}
+
+        <div class="content-adm">
+             <div class="content-adm">
+                    <form class="form-adm" action="/home-site/edit-serv" method="post">
+                        <input type="hidden" name="id" id="id" value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título:<span class="text-danger">*</span></label>
+                                <input type="text" name="servTitle" id="servTitle" class="input-adm" placeholder="Título um do topo serviço" value="{{data.servTitle}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Um:<span class="text-danger">*</span></label>
+                                <input type="text" name="servIconOne" id="servIconOne" class="input-adm" placeholder="Ícone um do serviço" value="{{data.servIconOne}}">
+                            </div>
+                        </div>
+                          <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Serviço Um:<span class="text-danger">*</span></label>
+                                <input type="text" name="servTitleOne" id="servTitleOne" class="input-adm" placeholder="Serviço um" value="{{data.servTitleOne}}">
+                            </div>
+                        </div>
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Um:<span class="text-danger">*</span></label>
+                                <input type="text" name="servDescOne" id="servDescOne" class="input-adm" placeholder="Descrição um do serviço" value="{{data.servDescOne}}">
+                            </div>
+                        </div>
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Dois:<span class="text-danger">*</span></label>
+                                <input type="text" name="servIconTwo" id="servIconTwo" class="input-adm" placeholder="Ícone dois do serviço" value="{{data.servIconTwo}}">
+                            </div>
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Serviço Dois:<span class="text-danger">*</span></label>
+                                <input type="text" name="servTitleTwo" id="servTitleTwo" class="input-adm" placeholder="Serviço dois" value="{{data.servTitleTwo}}">
+                            </div>
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Dois:<span class="text-danger">*</span></label>
+                                <input type="text" name="servDescTwo" id="servDescTwo" class="input-adm" placeholder="Descrição dois do serviço" value="{{data.servDescTwo}}">
+                            </div>
+                        </div>
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Três:<span class="text-danger">*</span></label>
+                                <input type="text" name="servIconThree" id="servIconThree" class="input-adm" placeholder="Ícone três " value="{{data.servIconThree}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Serviço Três:<span class="text-danger">*</span></label>
+                                <input type="text" name="servTitleThree" id="servTitleThree" class="input-adm" placeholder="Descrição três" value="{{data.servTitleThree}}">
+                            </div>
+                        </div>
+                        
+                         <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Três:<span class="text-danger">*</span></label>
+                                <input type="text" name="servDescThree" id="servDescThree" class="input-adm" placeholder="Descrição três" value="{{data.servDescThree}}">
+                            </div>
+                        </div>
+
+                        <p class="text-danger mb-5 fs-4">* campo obrigatório</p>
+
+                        <input type="submit" class="btn-warning" value="Editar">
+                    </form>
+               
+        </div>  
+    </div>
+</div>
+<!-- Fim do conteudo do administrativo -->
